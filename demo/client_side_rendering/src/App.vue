@@ -183,7 +183,7 @@ export default {
           {
             title: 'C💩NCEL',
             handler: () => {
-              this.$modal.hide('dialog')
+              this.$modal.hideA('dialog')
             }
           },
           {
@@ -234,7 +234,7 @@ export default {
         `,
         methods: {
           closeByName() {
-            this.$modal.hide('dynamic-modal'); 
+            this.$modal.hideA('dynamic-modal');
           },
           closeByEvent() {
             this.$emit('close');

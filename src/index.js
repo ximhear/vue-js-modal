@@ -88,7 +88,7 @@ const Plugin = {
           }
         }
       },
-      hide (name, params) {
+      hideA (name, params) {
         Plugin.event.$emit('toggle', name, false, params)
       },
       toggle (name, params) {
