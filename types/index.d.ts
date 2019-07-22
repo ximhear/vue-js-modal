@@ -14,6 +14,7 @@ declare interface VModal {
   show(modal: string | typeof Vue | ComponentOptions<Vue> | AsyncComponent, paramsOrProps?: object, params?: object, events?: object): void;
   hide(name: string, params?: object): void;
   toggle(name: string, params?: object): void;
+  emit(name: string, params?: object): void;
 }
 
 declare module "vue/types/vue" {
