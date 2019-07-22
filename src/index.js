@@ -94,8 +94,8 @@ const Plugin = {
       toggle (name, params) {
         Plugin.event.$emit('toggle', name, undefined, params)
       },
-      emit (name, params) {
-        Plugin.event.$emit(name, name, undefined, params)
+      sendExtra (name, params) {
+        Plugin.event.$emit("sendExtra", name, undefined, params)
       }
     }
     /**
