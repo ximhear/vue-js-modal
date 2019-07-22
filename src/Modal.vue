@@ -187,6 +187,7 @@ export default {
    */
   beforeMount () {
     Modal.event.$on('toggle', this.handleToggleEvent)
+    Modal.event.$on('sendExtra', this.handleSendExtraEvent)
 
     window.addEventListener('resize', this.handleWindowResize)
     this.handleWindowResize()
@@ -236,6 +237,7 @@ export default {
    */
   beforeDestroy () {
     Modal.event.$off('toggle', this.handleToggleEvent)
+    Modal.event.$off('sendExtra', this.handleSendExtraEvent)
     window.removeEventListener('resize', this.handleWindowResize)
 
     if (this.clickToClose) {
@@ -388,6 +390,9 @@ export default {
         this.toggle(nextState, params)
       }
     },
+    handleSendExtraEvent (name, state, params) {
+      this.$emit('sendExtra', params)
+    },
     /**
      * Initializes modal's size & position,
      * if "reset" flag is set to true - this function will be called
@@ -406,7 +411,7 @@ export default {
 
     handleEscapeKeyUp (event) {
       if (event.which === 27 && this.visible) {
-        this.$modal.hideA(this.name)
+        this.$modal.hide(this.name)
       }
     },
 

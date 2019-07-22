@@ -9,7 +9,7 @@
     <div 
       slot="top-right"
       class="ct-top-right"
-      @click="$modal.hideA('dog-profile')"
+      @click="$modal.hide('dog-profile')"
     >
       HIDE THE DOGGY
     </div>

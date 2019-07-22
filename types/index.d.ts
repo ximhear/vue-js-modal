@@ -12,7 +12,7 @@ export declare interface VueJSModalOptions {
 
 declare interface VModal {
   show(modal: string | typeof Vue | ComponentOptions<Vue> | AsyncComponent, paramsOrProps?: object, params?: object, events?: object): void;
-  hideA(name: string, params?: object): void;
+  hide(name: string, params?: object): void;
   toggle(name: string, params?: object): void;
   sendExtra(name: string, params?: object): void;
 }

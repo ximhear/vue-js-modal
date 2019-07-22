@@ -12,5 +12,5 @@ const vm = new Vue({
 }).$mount("#app");
 
 vm.$modal.show("awesome-modal");
-vm.$modal.hideA("awesome-modal", { customeEvent: "customEventParam" });
+vm.$modal.hide("awesome-modal", { customeEvent: "customEventParam" });
 vm.$modal.toggle("awesome-modal");
