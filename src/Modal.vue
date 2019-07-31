@@ -144,6 +144,10 @@ export default {
       validator (value) {
         return value >= 0 && value <= 1
       }
+    },
+    radius: {
+      type: String,
+      default: "3px",
     }
   },
   components: {
@@ -346,7 +350,8 @@ export default {
         top: this.position.top + 'px',
         left: this.position.left + 'px',
         width: this.trueModalWidth + 'px',
-        height: this.isAutoHeight ? 'auto' : this.trueModalHeight + 'px'
+        height: this.isAutoHeight ? 'auto' : this.trueModalHeight + 'px',
+        "border-radius": this.radius
       }
     }
   },
